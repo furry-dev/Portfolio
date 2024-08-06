@@ -1,0 +1,33 @@
+.nav
+  ul
+    display: flex
+    flex-direction: column
+    gap: 5px
+
+    list-style: none
+
+    li
+      a
+        color: var(--text-shy)
+        text-decoration: none
+
+        display: flex
+        align-items: center
+        gap: 1rem
+
+        &::before
+          content: ""
+          display: block
+          width: 2rem
+          height: 1px
+
+          background-color: var(--text-shy)
+
+          transition: width 0.3s ease-in-out
+
+        &:hover, &.active
+          color: var(--text-contrast)
+
+          &::before
+            width: 4rem
+            background-color: var(--text-contrast)

@@ -1,0 +1,56 @@
+.main
+  display: flex
+  gap: 6rem
+
+  width: 100%
+
+  .note
+    color: var(--text-shy)
+
+  .left
+    flex: 1 1 50%
+    max-height: 100vh
+
+    padding: 6rem 0 6rem 6rem
+
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    position: sticky
+    top: 0
+
+    .author
+      white-space: nowrap
+
+      display: flex
+      flex-direction: column
+      gap: 12px
+
+      .name
+        color: var(--text-contrast)
+        font-size: 48px
+
+      .role
+        font-size: 20px
+        line-height: 28px
+
+        color: var(--text-shy)
+
+  .right
+    padding: 6rem 6rem 6rem 0
+
+    section
+      margin-bottom: 9rem
+      min-height: calc(100vh - 12rem)
+
+      display: flex
+      flex-direction: column
+      gap: 15px
+
+      &:last-child
+        margin-bottom: 0
+
+    .desc
+      justify-content: center
+
