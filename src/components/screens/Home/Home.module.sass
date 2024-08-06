@@ -1,6 +1,7 @@
 .main
   display: flex
-  gap: 6rem
+  justify-content: space-between
+  gap: 3rem
 
   width: 100%
 
@@ -8,7 +9,6 @@
     color: var(--text-shy)
 
   .left
-    flex: 1 1 50%
     max-height: 100vh
 
     padding: 6rem 0 6rem 6rem
@@ -16,6 +16,7 @@
     display: flex
     flex-direction: column
     justify-content: space-between
+    gap: 5rem
 
     position: sticky
     top: 0
@@ -29,7 +30,7 @@
 
       .name
         color: var(--text-contrast)
-        font-size: 48px
+        font-size: clamp(32px, 9vw, 48px)
 
       .role
         font-size: 20px
@@ -38,6 +39,9 @@
         color: var(--text-shy)
 
   .right
+    max-width: 720px
+    flex: 1 1 50%
+
     padding: 6rem 6rem 6rem 0
 
     section
@@ -61,4 +65,27 @@
           display: flex
           flex-direction: column
           gap: 15px
+
+
+@media ((max-width: 1024px))
+  .main
+    flex-direction: column
+    padding: 6rem
+
+    .left
+      position: initial
+      padding: 0
+
+    .right
+      padding: 0
+      max-width: initial
+
+      section
+        min-height: auto
+
+@media ((max-width: 720px))
+
+  .main
+    padding: 3rem 2rem
+
 
