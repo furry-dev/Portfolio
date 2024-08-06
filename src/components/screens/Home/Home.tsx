@@ -7,11 +7,16 @@ import InitFlashLight from "@/components/other/FlashLight/FlashLight"
 import Navigation from "@/components/Navigation/Navigation"
 import EducationList from "@/components/Lists/EducationList/EducationList"
 import ProjectsList from "@/components/Lists/ProjectsList/ProjectsList"
+import TagsList from "@/components/Lists/TagsList/TagsList"
 
 const navLinks = [
     {
         id: "desc",
         name: "Desc",
+    },
+    {
+        id: "skills",
+        name: "Skills",
     },
     {
         id: "education",
@@ -48,6 +53,56 @@ export default function Home() {
                     className={styles.desc}
                     dangerouslySetInnerHTML={{__html: t.raw("AboutMe.Description")}}
                 ></section>
+                <section id={"skills"} className={styles.skills}>
+                    <h2>Skills:</h2>
+                    <div className={styles.titledList}>
+                        <h3>Langs:</h3>
+                        <TagsList
+                            tags={[
+                                "PHP (Sufficient)",
+                                "JavaScript (Excellent)",
+                                "TypeScript (Excellent)",
+                                "Node.js (Excellent)",
+                                "Python (Good)",
+                                "C++ (Beginner)",
+                                "Rust (Beginner)"
+                            ]}/>
+                    </div>
+                    <div className={styles.titledList}>
+                        <h3>Frameworks:</h3>
+                        <TagsList
+                            tags={[
+                                "Express",
+                                "Next.js",
+                                "NestJS",
+                                "PySide6",
+                                "PyQt",
+                                "React",
+                                "Tauri"
+                            ]}/>
+                    </div>
+                    <div className={styles.titledList}>
+                        <h3>Other:</h3>
+                        <TagsList
+                            tags={[
+                                "Git",
+                                "SSL",
+                                "Linux",
+                                "Docker",
+                                "MySQL",
+                                "MongoDB",
+                                "Adobe Photoshop",
+                                "Adobe PremierePro",
+                                "Adobe Audition",
+                                "Adobe After Effects",
+                                "PHPStorm",
+                                "PyCharm",
+                                "WebStorm",
+                                "Autodesk Fusion360",
+                                "Autodesk Inventor"
+                            ]}/>
+                    </div>
+                </section>
                 <section id={"education"}>
                     <h2>Education:</h2>
                     <EducationList/>
